@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "8d90edd8-93e8-4e05-a815-ac6ae7363d38",
+		"name": "AWS Account Deletion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3285274"
+	},
+	"item": [
+		{
+			"name": "List Accounts",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "secretKey",
+							"value": "xxx",
+							"type": "string"
+						},
+						{
+							"key": "accessKey",
+							"value": "abc",
+							"type": "string"
+						},
+						{
+							"key": "service",
+							"value": "organizations",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "us-east-1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Amz-Target",
+						"value": "AWSOrganizationsV20161128.ListAccounts",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-amz-json-1.1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://organizations.us-east-1.amazonaws.com/",
+					"protocol": "https",
+					"host": [
+						"organizations",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Account",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "secretKey",
+							"value": "xxx",
+							"type": "string"
+						},
+						{
+							"key": "accessKey",
+							"value": "abc",
+							"type": "string"
+						},
+						{
+							"key": "service",
+							"value": "organizations",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "us-east-1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Amz-Target",
+						"value": "AWSOrganizationsV20161128.CloseAccount",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-amz-json-1.1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"AccountId\": \"555555555555\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://organizations.us-east-1.amazonaws.com/",
+					"protocol": "https",
+					"host": [
+						"organizations",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
